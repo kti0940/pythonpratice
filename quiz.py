@@ -47,5 +47,6 @@ def std_weight(height, gender):
 
 height = 175
 gender = "남자"
-weight = round(std_weight(height / 100, gender),2)
-print(weight)
+weight = std_weight(height / 100, gender)
+weight = round(weight, 2)
+print(f"키 {height}cm {gender}의 표준 체중은 {weight}입니다")
