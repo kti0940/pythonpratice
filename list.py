@@ -49,5 +49,7 @@ print(num_list)
 num_list = [5,2,4,3,1]
 mix_list = ["조세호", 20, True]
 # print(mix_list)
+
+# 리스트 확장
 num_list.extend(mix_list)
 print(num_list)
