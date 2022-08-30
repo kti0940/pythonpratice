@@ -20,4 +20,4 @@ balance = 0
 balance = deposit(balance, 1000)
 # balance = withdraw(balance, 500)
 commission, balance = withdraw_night(balance, 500)
-print("수수료는 {0}원이며, 잔액은 {1}원입니다".format(commission, balance))
+print(f"수수료는 {commission}원이며, 잔액은 {balance}원입니다")
