@@ -39,14 +39,22 @@
         
 # print("총 탑승 승객 : {0}분".format(count))
 
-def std_weight(height, gender):
-    if gender == "남자":
-        return(height * height * 22)
-    else:
-        return(height * height * 21)
+# def std_weight(height, gender):
+#     if gender == "남자":
+#         return(height * height * 22)
+#     else:
+#         return(height * height * 21)
 
-height = 175
-gender = "남자"
-weight = std_weight(height / 100, gender)
-weight = round(weight, 2)
-print(f"키 {height}cm {gender}의 표준 체중은 {weight}입니다")
+# height = 175
+# gender = "남자"
+# weight = std_weight(height / 100, gender)
+# weight = round(weight, 2)
+# print(f"키 {height}cm {gender}의 표준 체중은 {weight}입니다")
+
+# for i in range(1,51):
+#     with open(str(i) + "주차.txt", "w", encoding="utf8") as report_file:
+#         report_file.write("- {0} 주차 주간 보고 - ".format(i))
+#         report_file.write("\n부서 :")
+#         report_file.write("\n이름 :")
+#         report_file.write("\n업무 요약 :")
+        
