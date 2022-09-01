@@ -58,28 +58,55 @@
 #         report_file.write("\n이름 :")
 #         report_file.write("\n업무 요약 :")
         
-class House:
-    #매물 초기화
-    def __init__(self, location, house_type, deal_type, price, completion_year):
-        self.location = location
-        self.house_type = house_type
-        self.deal_type = deal_type
-        self.price = price
-        self.completion_year = completion_year
+# class House:
+#     #매물 초기화
+#     def __init__(self, location, house_type, deal_type, price, completion_year):
+#         self.location = location
+#         self.house_type = house_type
+#         self.deal_type = deal_type
+#         self.price = price
+#         self.completion_year = completion_year
     
-    #매물 정보 표시
-    def show_detail(self):
-        print(self.location, self.house_type, self.deal_type, self.price, self.completion_year)
+#     #매물 정보 표시
+#     def show_detail(self):
+#         print(self.location, self.house_type, self.deal_type, self.price, self.completion_year)
     
-houses = []
-house1 = House("강남", "아파트", "매매", "10억", "2010년") 
-house2 = House("마포", "오피스텔", "전세", "5억", "2007년")
-house3 = House("송파", "빌라", "월세", "500/50", "2002년")
+# houses = []
+# house1 = House("강남", "아파트", "매매", "10억", "2010년") 
+# house2 = House("마포", "오피스텔", "전세", "5억", "2007년")
+# house3 = House("송파", "빌라", "월세", "500/50", "2002년")
 
-houses.append(house1)
-houses.append(house2)
-houses.append(house3)
+# houses.append(house1)
+# houses.append(house2)
+# houses.append(house3)
 
-print(f"총 {len(houses)}대의 매물이 있습니다")
-for house in houses:
-    house.show_detail()
+# print(f"총 {len(houses)}대의 매물이 있습니다")
+# for house in houses:
+#     house.show_detail()
+
+
+class SoldOutError(Exception):
+    pass
+    
+chicken = 10
+waiting = 1 # 홀 안에는 현재 만석, 대기번호 1부터 시작
+while(True):
+    try:
+        print(f"[남은 치킨] : {chicken}")
+        order = int(input("치킨 몇 마리 주문 하시겠습니까?"))
+        if order > chicken:
+            print("재료가 부족합니다")
+        elif order <= 0:
+            raise ValueError
+        else:
+            print(f"[대기번호 {waiting}] {order}마리 주문이 완료되었습니다")
+            waiting += 1
+            chicken -= order
+        
+        if chicken == 0:
+            raise(SoldOutError)
+    except ValueError:
+        print("잘못된 값을 입력하였습니다")
+    except SoldOutError:
+        print("재고가 소진되어 더 이상 주문을 받지 않습니다.")
+        break
