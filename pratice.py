@@ -21,6 +21,19 @@
 # price(5)
 # price_morning(4)
 
-from 모듈 import price_soldier as price
+# from 모듈 import price_soldier as price
 
-price(5)
+# price(5)
+
+# import travel.thailand
+# import travel.thailand.ThailandPackage # 불가능
+# trip_to = travel.thailand.ThailandPackage()
+# trip_to.detail()
+
+# from travel.thailand import ThailandPackage # from import 구문에는 모듈이나 패키지, 클래스 함수 모두 임포트 할 수 있음
+# trip_to = ThailandPackage()
+# trip_to.detail()
+
+from travel import vietnam
+trip_to = vietnam.VietnamPackage()
+trip_to.detail()
