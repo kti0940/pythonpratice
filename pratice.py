@@ -1,34 +1,26 @@
-# # 마린 : 공격 유닛, 군인, 총을 쏠 수 있음
+# import 모듈
 
-# name = "마린" #유닛의 이름
-# hp = 40 #유닛의 체력
-# damage = 5 #유닛의 공격력
+# 모듈.price(3)
+# 모듈.price_morning(4)
+# 모듈.price_soldier(5)
 
-# print(f"{name} 유닛이 생성되었습니다")
-# print(f"체력 {hp}, 공격력{damage}")
+# import 모듈 as m
 
-# # 탱크 : 공격 유닛, 탱크, 포를 쏠 수 있는데, 일반 모드 / 시즈 모드
-# tank_name = "탱크"
-# tank_hp = 150
-# tank_damage = 35
+# m.price(3)
+# m.price_morning(4)
+# m.price_soldier(5)
 
-# print(f"{tank_name} 유닛이 생성되었습니다")
-# print(f"체력 {tank_hp}, 공격력{tank_damage}")
+# from 모듈 import *
 
-# def attack(name, location, damage):
-#     print(f"{name} : {location} 방향으로 적군을 공격합니다. [공격력 {damage}]")
-    
-# attack(name, "1시", damage)
-# attack(tank_name, "1시", tank_damage)
+# price(3)
+# price_morning(4)
+# price_soldier(5)
 
-class Unit:
-    def __init__(self, name, hp, damage):
-        self.name = name
-        self.hp = hp
-        self.damage = damage
-        print(f"{self.name} 유닛이 생성되었습니다")
-        print(f"체력 {self.hp}, 공격력{self.damage}")
-    
-marine1 = Unit("마린", 40, 5)
-marine2 = Unit("마린", 40, 5)
-tank = Unit("탱크", 150, 35)
+# from 모듈 import price, price_morning
+
+# price(5)
+# price_morning(4)
+
+from 모듈 import price_soldier as price
+
+price(5)
